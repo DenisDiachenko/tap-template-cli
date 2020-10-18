@@ -48,6 +48,9 @@ function createDirectoryContents(templatePath: string, newProjectPath: string) {
       const originalContents = fs.readFileSync(originFilePath, 'utf8');
       const contents = template.render(originalContents, { projectName: newProjectPath });
 
+      // hack to avoid renaming .gitignore to .npmignore when packaged published
+      if (file === '.npmignore') file = '.gitignore';
+
       const writePath = `${CURRENT_DIRECTORY}/${newProjectPath}/${file}`;
       fs.writeFileSync(writePath, contents, 'utf8')
     } else if (stats.isDirectory()) {
