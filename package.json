@@ -1,5 +1,5 @@
 {
-  "name": "template-cli",
+  "name": "@unique/template-cli",
   "version": "1.0.0",
   "main": "dist/index.js",
   "scripts": {
@@ -7,7 +7,7 @@
     "build": "tsc && shx rm -rf dist/templates && shx cp -r src/templates dist"
   },
   "bin": {
-    "generate-new-app": "./dist/index.js"
+    "generate-new-app": "dist/index.js"
   },
   "devDependencies": {
     "@types/ejs": "^3.0.4",
@@ -22,5 +22,16 @@
     "ejs": "^3.1.5",
     "inquirer": "^7.3.3",
     "shelljs": "^0.8.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DenisDiachenko/template-cli.git"
+  },
+  "author": "Denys Diachenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DenisDiachenko/template-cli/issues"
+  },
+  "homepage": "https://github.com/DenisDiachenko/template-cli#readme",
+  "description": ""
 }
