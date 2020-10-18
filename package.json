@@ -1,5 +1,5 @@
 {
-  "name": "tap-template-cli",
+  "name": "create-template-cli",
   "version": "1.0.0",
   "main": "dist/index.js",
   "scripts": {
@@ -9,6 +9,10 @@
   "bin": {
     "generate-new-app": "dist/index.js"
   },
+  "files": [
+    "src",
+    ".gitigore"
+  ],
   "devDependencies": {
     "@types/ejs": "^3.0.4",
     "@types/inquirer": "^7.3.1",
