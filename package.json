@@ -1,5 +1,5 @@
 {
-  "name": "tap-template-cli",
+  "name": "tap-react-cli",
   "version": "1.0.0",
   "main": "dist/index.js",
   "scripts": {
