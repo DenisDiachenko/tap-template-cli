@@ -1,0 +1,26 @@
+{
+  "name": "template-cli",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "build": "tsc && shx rm -rf dist/templates && shx cp -r src/templates dist"
+  },
+  "bin": {
+    "generate-new-app": "./dist/index.js"
+  },
+  "devDependencies": {
+    "@types/ejs": "^3.0.4",
+    "@types/inquirer": "^7.3.1",
+    "@types/node": "^14.11.10",
+    "@types/shelljs": "^0.8.8",
+    "shx": "^0.3.2",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.0.3"
+  },
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "inquirer": "^7.3.3",
+    "shelljs": "^0.8.4"
+  }
+}
