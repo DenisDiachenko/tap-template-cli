@@ -1,17 +1,18 @@
 {
   "name": "tap-react-cli",
-  "version": "1.0.0",
+  "version": "1.0.9",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "start": "ts-node src/index.ts",
-    "build": "tsc && shx rm -rf dist/templates && shx cp -r src/templates dist"
+    "build": "tsc && shx rm -rf dist/templates && shx cp -r src/templates dist",
+    "prepublishOnly": "npm run build"
   },
   "bin": {
     "generate-new-app": "dist/index.js"
   },
   "files": [
-    "src",
-    ".gitigore"
+    "dist"
   ],
   "devDependencies": {
     "@types/ejs": "^3.0.4",
