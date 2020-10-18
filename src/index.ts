@@ -46,11 +46,7 @@ function createDirectoryContents(templatePath: string, newProjectPath: string) {
 
     if(stats.isFile()) {
       const originalContents = fs.readFileSync(originFilePath, 'utf8');
-      const contents = template.render(originalContents, { projectName: newProjectPath })
-
-      if (file === '.gitignore') {
-        console.log("createDirectoryContents -> file", originalContents)   
-      }
+      const contents = template.render(originalContents, { projectName: newProjectPath });
 
       const writePath = `${CURRENT_DIRECTORY}/${newProjectPath}/${file}`;
       fs.writeFileSync(writePath, contents, 'utf8')
